@@ -1,11 +1,10 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const { Server } = require("mongodb");
 const app = express();
 
 //middlewares
 app.use(bodyParser.urlencoded({ extended: true }));
-Server.use(bodyParser.json());
+app.use(bodyParser.json());
 
 app.listen(process.env.PORT || 3000);
 //"https://crud-tastic-demo.herokuapp.com/
